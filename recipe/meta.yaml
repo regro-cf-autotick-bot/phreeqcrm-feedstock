@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://test.pypi.org/packages/source/{{ name[0] }}/{{ name }}/phreeqcrm-{{ version }}.tar.gz
-  sha256: 554fca79fb74fc761c4564342dba44c9d493f6fd6b002663da7cf45349c5a78f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phreeqcrm-{{ version }}.tar.gz
+  sha256: 2efcf887b0c2a285e73ac3ff123e71addf7d98a013625d9dc2f9d62235705315
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
