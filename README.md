@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/phreeqcrm-feeds
 
 Home: https://github.com/usgs-coupled/phreeqcrm
 
-Package license: CC0-1.0
+Package license: BSD-3-Clause AND LicenseRef-USGS-Public-Domain
 
 Summary: A reaction module for transport simulators based on the geochemical model PHREEQC.
 
