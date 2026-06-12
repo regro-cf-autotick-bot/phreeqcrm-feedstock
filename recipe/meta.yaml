@@ -1,5 +1,5 @@
 {% set name = "phreeqcrm" %}
-{% set version = "0.0.17" %}
+{% set version = "0.0.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phreeqcrm-{{ version }}.tar.gz
-  sha256: 6374b32ea02bd3fd101f949ac790dafe5140039516afd606f00d6c523d8cddcf
+  sha256: 2efcf887b0c2a285e73ac3ff123e71addf7d98a013625d9dc2f9d62235705315
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -48,20 +48,23 @@ test:
     - pytest
   source_files:
     - swig/python/advect.pqi
-    - swig/python/AdvectBMI_py.yaml
     - swig/python/conftest.py
     - swig/python/constants.py
+    - swig/python/minimum.yaml
     - swig/python/phreeqc.dat
     - swig/python/test_basic.py
-    - swig/python/test_get_value.py
+    - swig/python/test_callbacks.py
+    - swig/python/test_functions.py
     - swig/python/test_get_value.py
     - swig/python/test_init.py
     - swig/python/test_irf.py
+    - swig/python/test_set_value.py
+    - swig/python/WriteYamlFile.py
 
 about:
   home: https://github.com/usgs-coupled/phreeqcrm
   summary: A reaction module for transport simulators based on the geochemical model PHREEQC.
-  license: CC0-1.0
+  license: BSD-3-Clause AND LicenseRef-USGS-Public-Domain
   license_file: LICENSE
 
 extra:
